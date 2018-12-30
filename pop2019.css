@@ -1,0 +1,21 @@
+
+
+.loopstr{
+    width:100%;
+    overflow-x:hidden;
+}
+
+.loopstr p{
+    white-space: nowrap;
+    animation: loopstr 3s linear forwards infinite;
+    position:relative;
+    left:0;
+}
+@keyframes loopstr {
+    0%{
+        left:0%;
+    }
+    100%{
+        left:-100%;
+    }
+}
