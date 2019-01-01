@@ -3,19 +3,20 @@
 .loopstr{
     width:100%;
     overflow-x:hidden;
+    white-space: nowrap;
 }
 
 .loopstr p{
-    white-space: nowrap;
-    animation: loopstr 3s linear forwards infinite;
+    animation: loopstr 100s linear forwards infinite;
     position:relative;
-    left:0;
+
+
 }
 @keyframes loopstr {
     0%{
         left:0%;
     }
     100%{
-        left:-100%;
+        left:-1000%;
     }
 }
