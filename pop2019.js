@@ -81,12 +81,12 @@ window.addEventListener("load",function(){
         }
     }
     function m_enter(event){
-        event.target.getElementsByClassName("maru")[0].classList.toggle("on");
-        event.target.getElementsByClassName("str")[0].classList.toggle("on");
+        event.target.getElementsByClassName("maru")[0].classList.add("on");
+        event.target.getElementsByClassName("str")[0].classList.add("on");
     }
     function m_leave(event){
-        event.target.getElementsByClassName("maru")[0].classList.toggle("on");
-        event.target.getElementsByClassName("str")[0].classList.toggle("on");
+        event.target.getElementsByClassName("maru")[0].classList.remove("on");
+        event.target.getElementsByClassName("str")[0].classList.remove("on");
 
     }
 
