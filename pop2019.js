@@ -24,7 +24,7 @@ window.addEventListener("load",function(){
 
     for(var i = 0;i < shade.length;i++){
         var pointy = shade[i].getBoundingClientRect().top + nowy;
-        if(windowh > pointy){
+        if(windowh + nowy > pointy){
             if(!shade[i].classList.contains("show")){
                 shade[i].classList.toggle("show");
                 shade[i].getElementsByTagName("img")[0].classList.toggle("show");
@@ -60,4 +60,53 @@ window.addEventListener("load",function(){
 
     }
 });
-// shade start --------------------------------------------
+// shade end --------------------------------------------
+
+
+//maruline start-----------------------------------------
+var maruline_resizemoveflg = false;
+window.addEventListener("load",function(){
+    maruline_resizemoveflg = true;
+    marulineopen();
+
+
+    var maruline = document.getElementsByClassName("maruline");
+    for(var i = 0;i < maruline.length;i++){
+        var box = maruline[i].getElementsByClassName("box");
+        for(var x = 0;x < box.length;x++){
+            var target = box[x].getElementsByClassName("area")[0];
+            target.addEventListener("mouseenter",m_enter,false);
+            target.addEventListener("mouseleave",m_leave,false);
+
+        }
+    }
+    function m_enter(event){
+        event.target.getElementsByClassName("maru")[0].classList.toggle("on");
+        event.target.getElementsByClassName("str")[0].classList.toggle("on");
+    }
+    function m_leave(event){
+        event.target.getElementsByClassName("maru")[0].classList.toggle("on");
+        event.target.getElementsByClassName("str")[0].classList.toggle("on");
+
+    }
+
+});
+
+window.addEventListener("resize",function(){
+    if(!maruline_resizemoveflg){
+        maruline_resizemoveflg = true;
+        marulineopen();
+    }
+});
+
+function marulineopen(){
+    var maruline = document.getElementsByClassName("maruline");
+    for(var i = 0;i < maruline.length;i++){
+        var box = maruline[i].getElementsByClassName("box");
+        for(var x = 0;x < box.length;x++){
+
+            box[x].style.height = box[x].clientWidth + "px";
+        }
+    }
+    maruline_resizemoveflg = false;
+}
