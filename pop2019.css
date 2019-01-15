@@ -35,7 +35,7 @@
 }
 .shade img{
     background-color:#ffd56a;
-    box-shadow: 20px 20px #a44a8b;
+    box-shadow: 10px 10px #a44a8b;
     position:relative;
     bottom:-100px;
 }
