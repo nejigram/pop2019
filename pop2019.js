@@ -72,6 +72,7 @@ window.addEventListener("load",function(){
 
     var maruline = document.getElementsByClassName("maruline");
     for(var i = 0;i < maruline.length;i++){
+        maruline[i].style.visibility = "visible";
         var box = maruline[i].getElementsByClassName("box");
         for(var x = 0;x < box.length;x++){
             var target = box[x].getElementsByClassName("area")[0];
